@@ -136,9 +136,9 @@ def update_psd_text():
 
 def test_psd_processing():
     """Test function for PSD processing"""
-    test_psd = "test.psd"  # Make sure this file exists in your PSD_DIRECTORY
+    test_psd = "1.psd"  # Make sure this file exists in your PSD_DIRECTORY
     test_updates = [
-        {"layer_id": "test_layer_1", "text": "Test text 1"},
+        {"layer_id": "title", "text": "Test text 1"},
         {"layer_id": "test_layer_2", "text": "Test text 2"},
         {"layer_id": "nonexistent_layer", "text": "Should fail"}
     ]
@@ -168,10 +168,11 @@ def test_psd_processing():
 
 if __name__ == '__main__':
     # Run tests if in debug mode
-    if app.debug:
+    # if app.debug:
+    if True:
         print("Running tests...")
         test_result = test_psd_processing()
         print(f"Tests {'passed' if test_result else 'failed'}")
         
-    app.run(debug=True, port=5000)
+    # app.run(debug=True, port=5000)
 
